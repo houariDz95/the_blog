@@ -1,6 +1,4 @@
 import {useContext, useEffect, useState} from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import {AuthContext} from "../context/AuthContext";
 import axios from 'axios';
 import moment from "moment";
@@ -76,12 +74,12 @@ const  Write = () => {
         <div className={styles.inputs}>
           <input type="text" className={styles.input} placeholder="title" value={title} onChange={(e) => setTitle(e.target.value)} />
           <input type="text" className={styles.input} placeholder="image URL" vlaue={img} onChange={(e) => setImg(e.target.value)} />
-          <ReactQuill
+          <textarea
             className={styles.editor}
             theme="snow"
             value={value}
-            onChange={setValue}
-            />
+            onChange={(e) => setValue(e.target.value)}
+            ></textarea>
         </div>
         <div className={styles.radioCategpries}>
         <h1 className="text-2xl md:text-xl text-gray-800 underline">Category</h1>

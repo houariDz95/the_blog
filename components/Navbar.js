@@ -33,6 +33,7 @@ const Navbar = ({single}) => {
   useEffect(() => {
     currentUser ? setAuth(true) : setAuth(false)
   }, [])
+  
   return(
     <div className={styles.wrapper}>
       <div className={`${single ? 'p-4' : 'py-10'} ${styles.container}`} >
