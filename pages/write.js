@@ -1,4 +1,5 @@
 import {useContext, useEffect, useState} from "react";
+
 import {AuthContext} from "../context/AuthContext";
 import axios from 'axios';
 import moment from "moment";
@@ -58,12 +59,12 @@ const  Write = () => {
       <div className={styles.navWrite}>
         <div className={styles.navWriteLeft}>
           <h1 className={styles.logo}>/TheBlog</h1>
-          <p className={styles.draft}>Draft in <span className="text-black">{currentUser.username}</span></p>
+          <p className={styles.draft}>Draft in <span className="text-black">{currentUser?.username}</span></p>
         </div>
         <div className={styles.navWriteRight}>
           <button className={styles.publishButton} onClick={handelClick}>Publish</button>
           <img 
-            src={currentUser.img ? `../uploads/${currentUser.img}` : 
+            src={currentUser?.img ? `../uploads/${currentUser?.img}` : 
             "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"} 
             alt=""
             className={styles.avatar}
