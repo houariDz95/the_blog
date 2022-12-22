@@ -1,5 +1,4 @@
 import {useContext, useEffect, useState} from "react";
-
 import {AuthContext} from "../context/AuthContext";
 import axios from 'axios';
 import moment from "moment";
@@ -18,9 +17,9 @@ const styles = {
   form: 'w-full max-w-[90%] m-auto flex flex-col md:flex-row justify-between',
   inputs: 'flex flex-col flex-1 md:flex-[2]',
   input: 'p-4 focus:outline-none  text-lg',
-  editor: 'p-4 h-[300px]',
+  editor: 'p-4 h-[300px] border-[1px] border-green-300 resize-none focus:outline-none',
   radioCategpries: 'flex-1 p-4 flex flex-col  gap-5 my-5 md:mt-0',
-  cat: 'flex items-center jsutify-center gap-[5px] hover:bg-gray-200 py-2',
+  cat: 'flex items-center justify-start  gap-[5px] hover:bg-gray-200 py-2',
   label: 'text-normal font-[500] text-gray-500',
 }
 
@@ -59,7 +58,7 @@ const  Write = () => {
       <div className={styles.navWrite}>
         <div className={styles.navWriteLeft}>
           <h1 className={styles.logo}>/TheBlog</h1>
-          <p className={styles.draft}>Draft in <span className="text-black">{currentUser?.username}</span></p>
+          <p className={styles.draft}>Draft in <span className="text-black"></span></p>
         </div>
         <div className={styles.navWriteRight}>
           <button className={styles.publishButton} onClick={handelClick}>Publish</button>
@@ -79,11 +78,11 @@ const  Write = () => {
             className={styles.editor}
             theme="snow"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
-            ></textarea>
+            onChange={(e) =>setValue(e.target.value)}
+          ></textarea>
         </div>
         <div className={styles.radioCategpries}>
-        <h1 className="text-2xl md:text-xl text-gray-800 underline">Category</h1>
+        <h1 className="text-2xl md:text-xl text-gray-800 underline mt-5 md:mt-0">Category</h1>
           <div className={styles.cat}>
             <input
               type="radio"
