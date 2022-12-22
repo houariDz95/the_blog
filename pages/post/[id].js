@@ -29,7 +29,7 @@ const styles = {
   postContentContainer: 'flex w-full flex-col items-center gap-10',
 }
 
-const post = ({post, posts}) => {
+const Post = ({post, posts}) => {
   const {setPostToUpdate, currentUser} = useContext(AuthContext);
   const [showModel, setShowModel] = useState(false);
 
@@ -106,7 +106,7 @@ const post = ({post, posts}) => {
   )
 }
 
-export default post;
+export default Post;
 
 export const getServerSideProps = async ({ params: { id }}) => {
   const response = await axios.get(`${BASE_URL}/api/posts/${id}`);  

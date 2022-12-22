@@ -64,7 +64,7 @@ const Profile = ({user, posts}) => {
         </div>
       </div>
       <div className="px-10 md:px-20">
-        <h1 className="text-2xl font-bold text-gray-500 text-center md:text-left">{user[0].username}'s Articles</h1>
+        <h1 className="text-2xl font-bold text-gray-500 text-center md:text-left">{user[0].username}s Articles</h1>
           <ArticleCard posts={userPosts}/>
       </div>
     </div>

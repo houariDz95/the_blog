@@ -36,7 +36,7 @@ const Login = () => {
         {err && <span className="text-red-800 text-sm">{err}</span>}
         <button className={styles.button} type="button" onClick={handleSubmit}>Login</button>
         <span className="text-xs">
-          Don't you have an account?<Link href="/auth/register" className="text-[#1a1b1f]">Register</Link>
+          Dont you have an account?<Link href="/auth/register" className="text-[#1a1b1f]">Register</Link>
         </span>
       </form>
     </div>

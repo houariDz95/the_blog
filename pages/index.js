@@ -1,6 +1,5 @@
 import {  useState } from 'react';
 import Head from 'next/head'
-import Image from 'next/image'
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -17,7 +16,6 @@ export default function Home({articles}) {
   const [science, setScience] = useState(articles.filter(article => article.cat === 'science'));
 
 
-  if(!articles) return <Spiner />
   return (
     <div className="w-full h-full bg-gray-200">
       <Head>

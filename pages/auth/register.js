@@ -14,7 +14,7 @@ const styles = {
 
 
 
-const register = () => {
+const Register = () => {
   const [inputs, setInputs] = useState({username: '', email: '', password: ''});
   const router = useRouter()
   const [err, setErr] = useState(null);
@@ -49,4 +49,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register
